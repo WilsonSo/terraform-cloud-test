@@ -1,8 +1,16 @@
-resource "aws_vpc" "test" {
-  cidr_block       = "10.10.0.0/16"
+resource "aws_vpc" "infra" {
+  cidr_block       = "10.0.0.0/16"
   instance_tenancy = "default"
 
   tags = {
-    Name = "test"
+    Name = "infra"
+  }
+}
+
+resource "aws_vpc" "web" {
+  cidr_block = "10.10.0.0/16"
+  
+  tags = {
+    Name = "web"
   }
 }
