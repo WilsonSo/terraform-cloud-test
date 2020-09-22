@@ -3,7 +3,7 @@ terraform {
     organization = "WilsonSo"
 
     workspaces {
-      name = "terraform-cloud-test"
+      name = "terraform-cloud-tier1"
     }
   }
 }
